@@ -1,0 +1,20 @@
+
+<h1> All the Articles </h1>
+
+<form action="/articles" method="GET">
+  <input type="text" name="search_name" >
+  <input type="submit" value="Search">
+</form>
+
+<ul>
+
+
+<% @articles.each do |article_instance| %>
+
+  <a href="/articles/<%= article_instance.id %>">
+    <li><%= article_instance.title %></li>
+  </a>
+
+<% end %>
+
+</ul>
