@@ -1,0 +1,5 @@
+<h1>index page</h1>
+
+<% @articles.each do |article| %>
+  <a href="/articles/<%= article.id %>">Title: <%= article.title %> (ID: <%= article.id %>)</a><br>
+<% end %>
